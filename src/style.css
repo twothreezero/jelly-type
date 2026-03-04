@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+:root {
+  --primary-gray: #333333;
+  --secondary-gray: #666666;
+  --light-gray: #999999;
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Titan One', sans-serif;
+  background-color: #fcfcfc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+canvas {
+  display: block;
+}
+
+/* Scrollbar styling for settings drawer */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Global Utility Classes (Used in App.tsx via styled-components or MUI sx) */
+#canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#canvas-container canvas {
+  pointer-events: auto; /* Allow mouse interaction with physics */
+}
+
+/* Ensure helper texts and stats look good on various screens */
+.helper-text {
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+  user-select: none;
+}
+
+/* Animation for the help modal or other glass elements */
+@keyframes glass-shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: glass-shimmer 3s infinite linear;
+}
