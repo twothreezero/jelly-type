@@ -72,4 +72,4 @@
 
 이 프로젝트는 [MIT License](LICENSE)를 따릅니다. 개인적/상업적 용도로 자유롭게 활용하세요.
 
-Developed by [230]
+Developed by [230](https://github.com/twothreezero/jelly-type)
