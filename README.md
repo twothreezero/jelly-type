@@ -45,7 +45,7 @@
 1. **저장소 클론 및 폴더 이동**
 
    ```bash
-   git clone [your-repo-url]
+   git clone [https://github.com/twothreezero/jelly-type.git]
    cd jellytype
    ```
 
